@@ -32,7 +32,7 @@ class ProductSizeWidget extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
                 decoration: BoxDecoration(
                     color: AppColors.secondWightColor,
                     borderRadius: BorderRadius.circular(10.r)),
@@ -43,7 +43,7 @@ class ProductSizeWidget extends StatelessWidget {
             },
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(
-                width: 20.w,
+                width: 5.w,
               );
             },
           ),

@@ -9,7 +9,8 @@ import 'package:laza/Features/login/login_screen.dart';
 import 'package:laza/Features/main%20layout/bloc/cubit/main_layout_cubit.dart';
 import 'package:laza/Features/main%20layout/presentatin/main_layout_screen.dart';
 import 'package:laza/Features/onboarding/onboarding_screen.dart';
-import 'package:laza/Features/product%20details/presentation/ui/product_details_screen.dart';
+import 'package:laza/Features/review/presentation/ui/add_review_screen.dart';
+import 'package:laza/Features/review/presentation/ui/review_screen.dart';
 import 'package:laza/Features/sign%20up/sign_up_screen.dart';
 import 'package:laza/Features/wallet/wallet_scren.dart';
 import 'package:laza/core/routing/routes.dart';
@@ -49,7 +50,7 @@ class AppRouter {
           alignment: Alignment.center,
           settings: settings,
         );
-     
+
       // case Routes.productDetailsScreen:
       //   return PageTransition(
       //     child: const ProductDetails(),
@@ -78,6 +79,22 @@ class AppRouter {
       case Routes.loginScreen:
         return PageTransition(
           child: const LoginScreen(),
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 200),
+          alignment: Alignment.center,
+          settings: settings,
+        );
+      case Routes.reviewScreen:
+        return PageTransition(
+          child: const ReviewScreen(),
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 200),
+          alignment: Alignment.center,
+          settings: settings,
+        );
+      case Routes.addReviewScreen:
+        return PageTransition(
+          child: const AddReviewScreen(),
           type: PageTransitionType.fade,
           duration: const Duration(milliseconds: 200),
           alignment: Alignment.center,

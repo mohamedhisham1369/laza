@@ -21,3 +21,17 @@ extension Navigation on BuildContext {
         isTrue ?? false,
       );
 }
+
+extension GapSizeExtension on double {
+  SizedBox width() {
+    return SizedBox(
+      width: this,
+    );
+  }
+
+  SizedBox height() {
+    return SizedBox(
+      height: this,
+    );
+  }
+}

@@ -14,7 +14,7 @@ class ProductTopImageWidget extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          height: 200.h,
+          height: 250.h,
           child: Image.asset(
             image,
             fit: BoxFit.fill,

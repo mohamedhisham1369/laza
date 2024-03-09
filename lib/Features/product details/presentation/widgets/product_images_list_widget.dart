@@ -14,10 +14,15 @@ class ProductImagesListWidget extends StatelessWidget {
         itemCount: productimages.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
+            width: MediaQuery.of(context).size.width / 6,
+            height: 80.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.r),
             ),
-            child: Image.asset(productimages[index]),
+            child: Image.asset(
+              productimages[index],
+              fit: BoxFit.fill,
+            ),
           );
         },
         separatorBuilder: (BuildContext context, int index) {

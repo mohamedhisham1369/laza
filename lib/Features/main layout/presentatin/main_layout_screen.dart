@@ -22,26 +22,46 @@ class MainLayoutScreen extends StatelessWidget {
             child: Container(
                 margin: EdgeInsets.all(20.sp),
                 height: 40.h,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: MainLayoutCubit.get(context).labelsandIcons.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ButtonNavWidget(
-                        text: MainLayoutCubit.get(context).labelsandIcons[index]
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ButtonNavWidget(
+                        text: MainLayoutCubit.get(context).labelsandIcons[0]
                             ["label"],
-                        check:
-                            index == MainLayoutCubit.get(context).currentindex,
+                        check: 0 == MainLayoutCubit.get(context).currentindex,
                         onpressed: () {
-                          MainLayoutCubit.get(context).changebutton(index);
+                          MainLayoutCubit.get(context).changebutton(0);
                         },
-                        image: MainLayoutCubit.get(context).labelsandIcons[index]
-                            ["image"]);
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return SizedBox(
-                      width: MediaQuery.of(context).size.width / 8.5,
-                    );
-                  },
+                        image: MainLayoutCubit.get(context).labelsandIcons[0]
+                            ["image"]),
+                    ButtonNavWidget(
+                        text: MainLayoutCubit.get(context).labelsandIcons[1]
+                            ["label"],
+                        check: 1 == MainLayoutCubit.get(context).currentindex,
+                        onpressed: () {
+                          MainLayoutCubit.get(context).changebutton(1);
+                        },
+                        image: MainLayoutCubit.get(context).labelsandIcons[1]
+                            ["image"]),
+                    ButtonNavWidget(
+                        text: MainLayoutCubit.get(context).labelsandIcons[2]
+                            ["label"],
+                        check: 2 == MainLayoutCubit.get(context).currentindex,
+                        onpressed: () {
+                          MainLayoutCubit.get(context).changebutton(2);
+                        },
+                        image: MainLayoutCubit.get(context).labelsandIcons[2]
+                            ["image"]),
+                    ButtonNavWidget(
+                        text: MainLayoutCubit.get(context).labelsandIcons[3]
+                            ["label"],
+                        check: 3 == MainLayoutCubit.get(context).currentindex,
+                        onpressed: () {
+                          MainLayoutCubit.get(context).changebutton(3);
+                        },
+                        image: MainLayoutCubit.get(context).labelsandIcons[3]
+                            ["image"])
+                  ],
                 )),
           ),
         );

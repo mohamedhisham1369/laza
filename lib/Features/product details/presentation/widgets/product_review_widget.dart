@@ -5,24 +5,16 @@ import 'package:laza/core/theming/colors.dart';
 import 'package:laza/core/widgets/custom_texts.dart';
 
 class ProductReviewWidget extends StatelessWidget {
-  const ProductReviewWidget({super.key});
+  const ProductReviewWidget({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Text18(text: "Reviews"),
-            const Spacer(),
-            Text16(
-              text: "View All",
-              textColor: AppColors.graycolor,
-            )
-          ],
-        ),
         SizedBox(
-          height: 10.h,
+          height: 15.h,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,

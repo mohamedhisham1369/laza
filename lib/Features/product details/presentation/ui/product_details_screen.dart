@@ -5,6 +5,8 @@ import 'package:laza/Features/product%20details/presentation/widgets/product_ima
 import 'package:laza/Features/product%20details/presentation/widgets/product_review_widget.dart';
 import 'package:laza/Features/product%20details/presentation/widgets/product_size_widget.dart';
 import 'package:laza/Features/product%20details/presentation/widgets/product_top_image_widget.dart';
+import 'package:laza/core/helpers/extensions.dart';
+import 'package:laza/core/routing/routes.dart';
 import 'package:laza/core/theming/assets.dart';
 import 'package:laza/core/theming/colors.dart';
 import 'package:laza/core/widgets/custom_button.dart';
@@ -88,10 +90,27 @@ class ProductDetailsSCreen extends StatelessWidget {
                     ProductSizeWidget(
                       size: size,
                     ),
-                    SizedBox(
-                      height: 10.h,
-                    ),
+                    // SizedBox(
+                    //   height: 10.h,
+                    // ),
+                    10.h.height(),
+
                     const ProductDescriptionWidget(),
+                    Row(
+                      children: [
+                        Text18(text: "Reviews"),
+                        const Spacer(),
+                        InkWell(
+                          onTap: () {
+                            context.pushNamed(Routes.reviewScreen);
+                          },
+                          child: Text16(
+                            text: "View All",
+                            textColor: AppColors.primaryColor,
+                          ),
+                        )
+                      ],
+                    ),
                     const ProductReviewWidget(),
                     SizedBox(
                       height: 15.h,

@@ -5,4 +5,5 @@ class AppColors {
   static const backgroudncolor = Color(0xffFEFEFE);
   static const graycolor = Color(0xff8F959E);
   static const secondWightColor = Color(0xffF5F6FA);
+  static const redColorBUtton = Color(0xffFF7043);
 }

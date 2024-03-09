@@ -6,5 +6,7 @@ class Routes {
   static const String forgotpasswordScreen = '/forgot_password';
   static const String mainLayout = '/main_layout_screen';
     static const String productDetailsScreen = '/product_details';
+    static const String reviewScreen = '/review_screen';
 
+    static const String addReviewScreen = '/add_review_screen';
 }

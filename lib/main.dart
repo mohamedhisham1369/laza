@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/Features/test/presentation/test_screen.dart';
 import 'package:laza/core/bloc_observer.dart';
 import 'package:laza/core/routing/app_router.dart';
-import 'package:laza/core/routing/routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,11 +29,15 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             scaffoldBackgroundColor: Colors.white,
-            useMaterial3: true,
-            
-                
-                ),
+            appBarTheme: const AppBarTheme(
+              centerTitle: true,
+              elevation: 0,
+              color: Colors.white,
+              scrolledUnderElevation: 0,
+            ),
+            useMaterial3: true),
         initialRoute: Routes.onboardingScreen,
+       
         onGenerateRoute: appRouter.generateRoute,
         builder: EasyLoading.init(),
       ),
